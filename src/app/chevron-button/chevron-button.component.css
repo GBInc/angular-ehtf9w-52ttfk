@@ -12,10 +12,10 @@
 
 .open {
   transition: 0.3s transform ease-in-out;
-  transform: rotate(-90deg);
+  transform: scaleX(-1);
 }
 
 .close {
   transition: 0.3s transform ease-in-out;
-  transform: rotate(90deg);
+  transform: scaleX(-1);
 }
