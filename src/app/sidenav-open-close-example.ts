@@ -17,7 +17,9 @@ export class SidenavOpenCloseExample {
 
   onSideNavToggle() {
     this.isMenuOpened = !this.isMenuOpened;
-    this.contentMargin = 70;
+    if (!this.isMenuOpened) {
+      this.contentMargin = 70;
+    }
   }
 }
 
