@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class SidenavOpenCloseExample {
   events: string[] = [];
   isMenuOpened = true;
+  contentMargin = 240;
 
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(
     window.location.host
@@ -16,6 +17,7 @@ export class SidenavOpenCloseExample {
 
   onSideNavToggle() {
     this.isMenuOpened = !this.isMenuOpened;
+    this.contentMargin = 70;
   }
 }
 

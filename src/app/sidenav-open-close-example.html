@@ -1,9 +1,11 @@
 <mat-sidenav-container class="example-container" *ngIf="shouldRun">
   <mat-sidenav
     #sidenav
+    id="sidenav"
     mode="side"
     [class.menu-open]="isMenuOpened"
     [class.menu-closed]="!isMenuOpened"
+    opened
   >
     Sidenav content
     <p>
@@ -11,7 +13,7 @@
     </p>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin">
     <p>
       <mat-checkbox [(ngModel)]="isMenuOpened">sidenav.opened</mat-checkbox>
     </p>
