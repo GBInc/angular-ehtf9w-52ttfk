@@ -2,24 +2,21 @@
   <mat-sidenav
     #sidenav
     mode="side"
-    [(opened)]="opened"
-    (opened)="events.push('open!')"
-    (closed)="events.push('close!')"
+    [class.menu-open]="isMenuOpened"
+    [class.menu-closed]="!isMenuOpened"
   >
     Sidenav content
     <p>
-      <button chevronButton (click)="onSideNavToggle()">
-        sidenav.toggle()
-      </button>
+      <button chevronButton (click)="onSideNavToggle()" />
     </p>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
     <p>
-      <button chevronButton (click)="onSideNavToggle()">
-        sidenav.toggle()
-      </button>
+      <mat-checkbox [(ngModel)]="isMenuOpened">sidenav.opened</mat-checkbox>
+    </p>
+    <p>
+      <button chevronButton (click)="onSideNavToggle()"></button>
     </p>
     <p>Events:</p>
     <div class="example-events">
