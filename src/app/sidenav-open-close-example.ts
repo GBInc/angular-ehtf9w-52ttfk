@@ -19,6 +19,8 @@ export class SidenavOpenCloseExample {
     this.isMenuOpened = !this.isMenuOpened;
     if (!this.isMenuOpened) {
       this.contentMargin = 70;
+    } else {
+      this.contentMargin = 240;
     }
   }
 }
